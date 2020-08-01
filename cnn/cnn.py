@@ -8,7 +8,7 @@ def load_MNIST():
 
 def Model():
     model = tf.keras.models.Sequential()
-    model.add(tf.keras.layers.Reshape((28, 28, 1), input_shape=(28,28)))
+    model.add(tf.keras.layers.Reshape((28, 28, 1), input_shape=(28, 28)))
     model.add(tf.keras.layers.Conv2D(32, (3, 3), activation='relu'))  # Filter 32, Kernel_size 3x3
     model.add(tf.keras.layers.MaxPooling2D((2, 2)))
     model.add(tf.keras.layers.Conv2D(64, (3, 3), activation='relu'))
